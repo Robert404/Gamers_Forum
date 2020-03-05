@@ -1,0 +1,10 @@
+C:\Projects\Games_Forum\Games_Forum.Data\bin\Debug\netcoreapp3.0\Games_Forum.Data.deps.json
+C:\Projects\Games_Forum\Games_Forum.Data\bin\Debug\netcoreapp3.0\Games_Forum.Data.dll
+C:\Projects\Games_Forum\Games_Forum.Data\obj\Debug\netcoreapp3.0\Games_Forum.Data.csprojAssemblyReference.cache
+C:\Projects\Games_Forum\Games_Forum.Data\obj\Debug\netcoreapp3.0\Games_Forum.Data.AssemblyInfoInputs.cache
+C:\Projects\Games_Forum\Games_Forum.Data\obj\Debug\netcoreapp3.0\Games_Forum.Data.AssemblyInfo.cs
+C:\Projects\Games_Forum\Games_Forum.Data\bin\Debug\netcoreapp3.0\Games_Forum.Data.runtimeconfig.json
+C:\Projects\Games_Forum\Games_Forum.Data\bin\Debug\netcoreapp3.0\Games_Forum.Data.runtimeconfig.dev.json
+C:\Projects\Games_Forum\Games_Forum.Data\bin\Debug\netcoreapp3.0\Games_Forum.Data.pdb
+C:\Projects\Games_Forum\Games_Forum.Data\obj\Debug\netcoreapp3.0\Games_Forum.Data.dll
+C:\Projects\Games_Forum\Games_Forum.Data\obj\Debug\netcoreapp3.0\Games_Forum.Data.pdb
