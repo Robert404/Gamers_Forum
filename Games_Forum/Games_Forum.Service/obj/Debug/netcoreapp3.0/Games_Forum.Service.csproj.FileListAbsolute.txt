@@ -9,3 +9,14 @@ C:\Projects\Games_Forum\Games_Forum.Service\bin\Debug\netcoreapp3.0\Games_Forum.
 C:\Projects\Games_Forum\Games_Forum.Service\bin\Debug\netcoreapp3.0\Games_Forum.Service.pdb
 C:\Projects\Games_Forum\Games_Forum.Service\obj\Debug\netcoreapp3.0\Games_Forum.Service.dll
 C:\Projects\Games_Forum\Games_Forum.Service\obj\Debug\netcoreapp3.0\Games_Forum.Service.pdb
+C:\Games_Forum\Games_Forum\Games_Forum.Service\bin\Debug\netcoreapp3.0\Games_Forum.Service.deps.json
+C:\Games_Forum\Games_Forum\Games_Forum.Service\bin\Debug\netcoreapp3.0\Games_Forum.Service.dll
+C:\Games_Forum\Games_Forum\Games_Forum.Service\bin\Debug\netcoreapp3.0\Games_Forum.Service.pdb
+C:\Games_Forum\Games_Forum\Games_Forum.Service\bin\Debug\netcoreapp3.0\Games_Forum.Data.dll
+C:\Games_Forum\Games_Forum\Games_Forum.Service\bin\Debug\netcoreapp3.0\Games_Forum.Data.pdb
+C:\Games_Forum\Games_Forum\Games_Forum.Service\obj\Debug\netcoreapp3.0\Games_Forum.Service.csprojAssemblyReference.cache
+C:\Games_Forum\Games_Forum\Games_Forum.Service\obj\Debug\netcoreapp3.0\Games_Forum.Service.AssemblyInfoInputs.cache
+C:\Games_Forum\Games_Forum\Games_Forum.Service\obj\Debug\netcoreapp3.0\Games_Forum.Service.AssemblyInfo.cs
+C:\Games_Forum\Games_Forum\Games_Forum.Service\obj\Debug\netcoreapp3.0\Games_Forum.Service.csproj.CopyComplete
+C:\Games_Forum\Games_Forum\Games_Forum.Service\obj\Debug\netcoreapp3.0\Games_Forum.Service.dll
+C:\Games_Forum\Games_Forum\Games_Forum.Service\obj\Debug\netcoreapp3.0\Games_Forum.Service.pdb
