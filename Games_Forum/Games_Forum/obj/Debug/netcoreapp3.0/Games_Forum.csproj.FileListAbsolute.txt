@@ -158,8 +158,6 @@ C:\Projects\Games_Forum\Games_Forum\bin\Debug\netcoreapp3.0\System.Runtime.Compi
 C:\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Games_Forum.csprojAssemblyReference.cache
 C:\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\staticwebassets\Games_Forum.StaticWebAssets.Manifest.cache
 C:\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\staticwebassets\Games_Forum.StaticWebAssets.xml
-C:\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Games_Forum.MvcApplicationPartsAssemblyInfo.cs
-C:\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Games_Forum.MvcApplicationPartsAssemblyInfo.cache
 C:\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Games_Forum.RazorAssemblyInfo.cache
 C:\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Games_Forum.RazorAssemblyInfo.cs
 C:\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Games_Forum.AssemblyInfoInputs.cache
@@ -312,3 +310,6 @@ C:\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Games_Forum.Razor
 C:\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Games_Forum.RazorTargetAssemblyInfo.cs
 C:\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Games_Forum.Views.pdb
 C:\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Games_Forum.csproj.CopyComplete
+C:\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Games_Forum.MvcApplicationPartsAssemblyInfo.cs
+C:\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Games_Forum.MvcApplicationPartsAssemblyInfo.cache
+C:\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Razor\Views\Forum\Topic.cshtml.g.cs

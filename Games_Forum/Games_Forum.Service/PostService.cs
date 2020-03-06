@@ -1,5 +1,6 @@
 ﻿using Games_Forum.Data;
 using Games_Forum.Data.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,7 +43,11 @@ namespace Games_Forum.Service
 
         public Post GetById(int id)
         {
-            throw new NotImplementedException();
+            return _context.Posts.Where(post => post.Id == id)
+                .Include(post => post.User)
+                .Include(post => post.Replies)
+                    .ThenInclude(post => post.User)
+                .Include(post => post.Forum).First();
         }
 
         public IEnumerable<Post> GetFilteredPosts(string searchQuery)
