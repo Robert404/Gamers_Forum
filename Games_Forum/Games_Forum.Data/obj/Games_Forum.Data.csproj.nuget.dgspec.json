@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Games_Forum\\Games_Forum\\Games_Forum.Data\\Games_Forum.Data.csproj": {}
+    "C:\\Games_Forum_New\\Games_Forum\\Games_Forum\\Games_Forum.Data\\Games_Forum.Data.csproj": {}
   },
   "projects": {
-    "C:\\Games_Forum\\Games_Forum\\Games_Forum.Data\\Games_Forum.Data.csproj": {
+    "C:\\Games_Forum_New\\Games_Forum\\Games_Forum\\Games_Forum.Data\\Games_Forum.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Games_Forum\\Games_Forum\\Games_Forum.Data\\Games_Forum.Data.csproj",
+        "projectUniqueName": "C:\\Games_Forum_New\\Games_Forum\\Games_Forum\\Games_Forum.Data\\Games_Forum.Data.csproj",
         "projectName": "Games_Forum.Data",
-        "projectPath": "C:\\Games_Forum\\Games_Forum\\Games_Forum.Data\\Games_Forum.Data.csproj",
+        "projectPath": "C:\\Games_Forum_New\\Games_Forum\\Games_Forum\\Games_Forum.Data\\Games_Forum.Data.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Games_Forum\\Games_Forum\\Games_Forum.Data\\obj\\",
+        "outputPath": "C:\\Games_Forum_New\\Games_Forum\\Games_Forum\\Games_Forum.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

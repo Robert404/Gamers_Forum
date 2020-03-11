@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.Collections.Generic;
 
 namespace Games_Forum.Data.Models
@@ -10,7 +11,7 @@ namespace Games_Forum.Data.Models
         public string Content { get; set; }
         public DateTime Created { get; set; }
 
-        public virtual ApplicationUser User { get; set; }
+        public virtual IdentityUser User { get; set; }
         public virtual Forum Forum { get; set; }
         public virtual IEnumerable<PostReply> Replies { get; set; }
     }

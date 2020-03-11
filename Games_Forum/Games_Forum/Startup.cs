@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Games_Forum.Data;
 using Games_Forum.Service;
+using Games_Forum.Data.Models;
 
 namespace Games_Forum
 {

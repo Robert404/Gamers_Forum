@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Games_Forum\\Games_Forum\\Games_Forum\\Games_Forum.csproj": {}
+    "C:\\Games_Forum_New\\Games_Forum\\Games_Forum\\Games_Forum\\Games_Forum.csproj": {}
   },
   "projects": {
-    "C:\\Games_Forum\\Games_Forum\\Games_Forum.Data\\Games_Forum.Data.csproj": {
+    "C:\\Games_Forum_New\\Games_Forum\\Games_Forum\\Games_Forum.Data\\Games_Forum.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Games_Forum\\Games_Forum\\Games_Forum.Data\\Games_Forum.Data.csproj",
+        "projectUniqueName": "C:\\Games_Forum_New\\Games_Forum\\Games_Forum\\Games_Forum.Data\\Games_Forum.Data.csproj",
         "projectName": "Games_Forum.Data",
-        "projectPath": "C:\\Games_Forum\\Games_Forum\\Games_Forum.Data\\Games_Forum.Data.csproj",
+        "projectPath": "C:\\Games_Forum_New\\Games_Forum\\Games_Forum\\Games_Forum.Data\\Games_Forum.Data.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Games_Forum\\Games_Forum\\Games_Forum.Data\\obj\\",
+        "outputPath": "C:\\Games_Forum_New\\Games_Forum\\Games_Forum\\Games_Forum.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -72,14 +72,14 @@
         }
       }
     },
-    "C:\\Games_Forum\\Games_Forum\\Games_Forum.Service\\Games_Forum.Service.csproj": {
+    "C:\\Games_Forum_New\\Games_Forum\\Games_Forum\\Games_Forum.Service\\Games_Forum.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Games_Forum\\Games_Forum\\Games_Forum.Service\\Games_Forum.Service.csproj",
+        "projectUniqueName": "C:\\Games_Forum_New\\Games_Forum\\Games_Forum\\Games_Forum.Service\\Games_Forum.Service.csproj",
         "projectName": "Games_Forum.Service",
-        "projectPath": "C:\\Games_Forum\\Games_Forum\\Games_Forum.Service\\Games_Forum.Service.csproj",
+        "projectPath": "C:\\Games_Forum_New\\Games_Forum\\Games_Forum\\Games_Forum.Service\\Games_Forum.Service.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Games_Forum\\Games_Forum\\Games_Forum.Service\\obj\\",
+        "outputPath": "C:\\Games_Forum_New\\Games_Forum\\Games_Forum\\Games_Forum.Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -95,8 +95,8 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Games_Forum\\Games_Forum\\Games_Forum.Data\\Games_Forum.Data.csproj": {
-                "projectPath": "C:\\Games_Forum\\Games_Forum\\Games_Forum.Data\\Games_Forum.Data.csproj"
+              "C:\\Games_Forum_New\\Games_Forum\\Games_Forum\\Games_Forum.Data\\Games_Forum.Data.csproj": {
+                "projectPath": "C:\\Games_Forum_New\\Games_Forum\\Games_Forum\\Games_Forum.Data\\Games_Forum.Data.csproj"
               }
             }
           }
@@ -134,14 +134,14 @@
         }
       }
     },
-    "C:\\Games_Forum\\Games_Forum\\Games_Forum\\Games_Forum.csproj": {
+    "C:\\Games_Forum_New\\Games_Forum\\Games_Forum\\Games_Forum\\Games_Forum.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Games_Forum\\Games_Forum\\Games_Forum\\Games_Forum.csproj",
+        "projectUniqueName": "C:\\Games_Forum_New\\Games_Forum\\Games_Forum\\Games_Forum\\Games_Forum.csproj",
         "projectName": "Games_Forum",
-        "projectPath": "C:\\Games_Forum\\Games_Forum\\Games_Forum\\Games_Forum.csproj",
+        "projectPath": "C:\\Games_Forum_New\\Games_Forum\\Games_Forum\\Games_Forum\\Games_Forum.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Games_Forum\\Games_Forum\\Games_Forum\\obj\\",
+        "outputPath": "C:\\Games_Forum_New\\Games_Forum\\Games_Forum\\Games_Forum\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -157,11 +157,11 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Games_Forum\\Games_Forum\\Games_Forum.Data\\Games_Forum.Data.csproj": {
-                "projectPath": "C:\\Games_Forum\\Games_Forum\\Games_Forum.Data\\Games_Forum.Data.csproj"
+              "C:\\Games_Forum_New\\Games_Forum\\Games_Forum\\Games_Forum.Data\\Games_Forum.Data.csproj": {
+                "projectPath": "C:\\Games_Forum_New\\Games_Forum\\Games_Forum\\Games_Forum.Data\\Games_Forum.Data.csproj"
               },
-              "C:\\Games_Forum\\Games_Forum\\Games_Forum.Service\\Games_Forum.Service.csproj": {
-                "projectPath": "C:\\Games_Forum\\Games_Forum\\Games_Forum.Service\\Games_Forum.Service.csproj"
+              "C:\\Games_Forum_New\\Games_Forum\\Games_Forum\\Games_Forum.Service\\Games_Forum.Service.csproj": {
+                "projectPath": "C:\\Games_Forum_New\\Games_Forum\\Games_Forum\\Games_Forum.Service\\Games_Forum.Service.csproj"
               }
             }
           }
