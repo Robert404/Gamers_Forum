@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@inject UserManager<IdentityUser> UserManager
+@inject SignInManager<IdentityUser> SignInManager
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -6,26 +9,54 @@
     <title>@ViewData["Title"] - Games_Forum</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Games_Forum</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <a class="navbar-brand navLogo" asp-controller="Home" asp-action="Index"></a>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+                        <li><a asp-controller="Forum" asp-action="Index">Forums</a></li>
+                        @if (SignInManager.IsSignedIn(User))
+                        {
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Settings<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li role="separator" class="divider"></li>
+                                    <li class="dropdown-header">Profile</li>
+                                    <li><a asp-controller="Profile" asp-action="Detail">MyProfile</a></li>
+                                    @if (User.IsInRole("Admin"))
+                                    {
+                                        <li role="separator" class="divider"></li>
+                                        <li class="dropdown-header">Admin</li>
+                                        <li><a asp-controller="Form" asp-action="Create">Create Forum</a></li>
+                                        <li><a asp-controller="Profile" asp-action="index">View Users</a></li>
+                                    }
+                                </ul>
+                            </li>
+                        }
                     </ul>
+                    @if (!SignInManager.IsSignedIn(User))
+                    {
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a asp-controller="Account" asp-action="Login">Sign In</a></li>
+                            <li class="active"><a asp-controller="Account" asp-action="Register">Register</a></li>
+                        </ul>
+                    }
+
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                        
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>Hello, @UserManager.GetUserName(User)</li>
+                            <li><a asp-controller="Account" asp-action="Logout">Log Out</a></li>
+                        </ul>
+                    }
                 </div>
             </div>
         </nav>

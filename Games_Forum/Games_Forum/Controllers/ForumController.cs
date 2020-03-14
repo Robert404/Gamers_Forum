@@ -14,6 +14,7 @@ namespace Games_Forum.Controllers
     {
         private readonly IForum _forumService;
         private readonly IPost _postService;
+        ApplicationUser appUser = new ApplicationUser();
         public ForumController(IForum forumService)
         {
             _forumService = forumService;
@@ -44,7 +45,7 @@ namespace Games_Forum.Controllers
             {
                 Id = post.Id,
                 AuthorId = post.User.Id,
-                //AuthorRating = post.User.Rating,
+                AuthorRating = appUser.Rating,
                 Title = post.Title,
                 DatePosted = post.Created.ToString(),
                 RepliesCount = post.Replies.Count(),

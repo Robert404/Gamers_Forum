@@ -18,3 +18,13 @@ C:\Games_Forum\Games_Forum\Games_Forum.Data\obj\Debug\netcoreapp3.0\Games_Forum.
 C:\Games_Forum\Games_Forum\Games_Forum.Data\obj\Debug\netcoreapp3.0\Games_Forum.Data.AssemblyInfo.cs
 C:\Games_Forum\Games_Forum\Games_Forum.Data\obj\Debug\netcoreapp3.0\Games_Forum.Data.dll
 C:\Games_Forum\Games_Forum\Games_Forum.Data\obj\Debug\netcoreapp3.0\Games_Forum.Data.pdb
+C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum.Data\bin\Debug\netcoreapp3.0\Games_Forum.Data.deps.json
+C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum.Data\bin\Debug\netcoreapp3.0\Games_Forum.Data.runtimeconfig.json
+C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum.Data\bin\Debug\netcoreapp3.0\Games_Forum.Data.runtimeconfig.dev.json
+C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum.Data\bin\Debug\netcoreapp3.0\Games_Forum.Data.dll
+C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum.Data\bin\Debug\netcoreapp3.0\Games_Forum.Data.pdb
+C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum.Data\obj\Debug\netcoreapp3.0\Games_Forum.Data.csprojAssemblyReference.cache
+C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum.Data\obj\Debug\netcoreapp3.0\Games_Forum.Data.AssemblyInfoInputs.cache
+C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum.Data\obj\Debug\netcoreapp3.0\Games_Forum.Data.AssemblyInfo.cs
+C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum.Data\obj\Debug\netcoreapp3.0\Games_Forum.Data.dll
+C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum.Data\obj\Debug\netcoreapp3.0\Games_Forum.Data.pdb
