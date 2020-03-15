@@ -39,12 +39,17 @@ namespace Games_Forum.Controllers
                 AuthorRating = appUser.Rating,
                 Created = post.Created,
                 PostContent = post.Content,
-                Replies = replies
+                Replies = replies,
+                ForumId = post.Forum.Id,
+                ForumName = post.Forum.Title,
+                IsAuthorAdmin = IsAuthorAdmin(post.User)
             };
 
 
             return View(model);
         }
+
+        
 
         public IActionResult Create(int id) 
         {
@@ -96,8 +101,14 @@ namespace Games_Forum.Controllers
                 AuthorRating = r.User.Rating,
                 Created = r.Created,
                 PostId = r.Post.Id,
-                ReplyContent = r.Content
+                ReplyContent = r.Content,
+                IsAuthorAdmin = IsAuthorAdmin(r.User)
             });
+        }
+
+        private bool IsAuthorAdmin(IdentityUser user)
+        {
+            return _userManager.GetRolesAsync(user).Result.Contains("Admin");
         }
     }
 }

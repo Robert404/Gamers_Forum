@@ -29,6 +29,7 @@ namespace Games_Forum
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddScoped<IForum, ForumService>();
             services.AddScoped<IPost, PostService>();

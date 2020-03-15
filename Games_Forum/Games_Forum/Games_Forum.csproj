@@ -22,4 +22,9 @@
     <ProjectReference Include="..\Games_Forum.Service\Games_Forum.Service.csproj" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <Folder Include="wwwroot\images\forum\" />
+  </ItemGroup>
+
 </Project>

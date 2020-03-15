@@ -479,7 +479,6 @@ C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\R
 C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
 C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_Layout.cshtml.g.cs
-C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
 C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Razor\Views\_ViewStart.cshtml.g.cs
@@ -489,3 +488,4 @@ C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\G
 C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Games_Forum.csproj.CopyComplete
 C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Games_Forum.dll
 C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Games_Forum.pdb
+C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
