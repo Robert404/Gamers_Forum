@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Games_Forum</title>
+    <title>@ViewData["Title"] - Games Forum</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
@@ -16,7 +16,8 @@
     <header>
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
         <div class="container">
-            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Games_Forum</a>
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Games 
+            Forum</a>
             <a class="navbar-brand navLogo" asp-controller="Home" asp-action="Index"></a>
             <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                 <partial name="_LoginPartial" />
@@ -54,7 +55,7 @@
 
                     <ul class="nav navbar-nav navbar-right">
                         <li>Hello, @UserManager.GetUserName(User)</li>
-                        <li><a asp-controller="Account" asp-action="Logout">Log Out</a></li>
+                        <a asp-controller="Account" asp-action="Logout">Logout</a>
                     </ul>
                 }
             </div>
