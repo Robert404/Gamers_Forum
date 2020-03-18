@@ -99,10 +99,6 @@ body {
 }
 
 
-.homeButton {
-    margin-left: 0px;
-}
-
 .navLogo {
     background-image: url('/images/theme/forumlogo.jpg');
     background-size: 110%;
@@ -463,3 +459,17 @@ body {
     padding-left: 15px;
     padding-right: 15px;
 }
+
+/*Forum Topic Page*/
+
+.searchBar {
+    background-color: #555;
+    width: 60%;
+    transition: ease .3s;
+    border: none;
+}
+    .searchBar:focus {
+        color: black;
+        width: 80%;
+        background-color: #fff;
+    }

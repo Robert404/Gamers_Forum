@@ -491,3 +491,4 @@ C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\G
 C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
 C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Razor\Views\Account\Register.cshtml.g.cs
 C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Razor\Views\Account\Login.cshtml.g.cs
+C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Razor\Views\Search\Index.cshtml.g.cs
