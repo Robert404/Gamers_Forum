@@ -3,36 +3,39 @@
 
 <div class="container body-content">
     <div class="row sectionHeader">
-        <span>@Model.Forum.Name Forum</span>
         <div class="sectionHeading">
-        @if (Context.User.Identity.IsAuthenticated) 
-        {
-            <span id="headingBtn">
-                <a asp-controller="Post" asp-action="Create" asp-route-id="@Model.Forum.Id" class="btn btn-newPost">Create Post</a>
-            </span>
-        }
-        <form asp-controller="Forum" asp-action="Search" method="post">
-            <div class="searchForm">
-                <input asp-for="SearchQuery" type="text" placeholder="Search..." class="searchBar" onfocus="clearThis(this)" />
-                <button type="submit" class="btn buttonSearch">
-                    <i class="material-icons">search</i>
-                </button>
-            </div>
-            <input asp-for="Forum.Id" name="id" type="hidden" />
-        </form>
+            <span>@Model.Forum.Name Forum</span>
+
+            @if (Context.User.Identity.IsAuthenticated)
+            {
+                <span id="headingBtn">
+                    <a asp-controller="Post" asp-action="Create" asp-route-id="@Model.Forum.Id" class="btn btn-newPost">Create Post</a>
+                </span>
+            }
+            <form asp-controller="Forum" asp-action="Search" method="post">
+                <div class="searchForm">
+                    <input asp-for="SearchQuery" type="text" placeholder="Search..." class="searchBar" onfocus="clearThis(this)" />
+                    <button type="submit" class="btn buttonSearch">
+                        <i class="material-icons">search</i>
+                    </button>
+                </div>
+                <input asp-for="Forum.Id" name="id" type="hidden" />
+            </form>
         </div>
         <div class="sectionDescription">
             <div class="forumLogo" style="background-image: url(@Model.Forum.ImageUrl)">
-                <p>Welcome to the @Model.Forum.Name forum</p>
-                @if (!User.Identity.IsAuthenticated) 
+                <p class="sectionDescriptionText">Welcome to the @Model.Forum.Name forum</p>
+                @if (!User.Identity.IsAuthenticated)
                 {
-                    <p>
-                        <span>You must be 
-                        <a asp-controller="AccountController" asp-action="Register">registered</a>
-                        user to create a new post</span>
-                    </p> 
+                    <p class="sectionDescriptionText">
+                        <span>
+                            You must be
+                            <a asp-controller="Account" asp-action="Register">registered</a>
+                            user to create a new post
+                        </span>
+                    </p>
                 }
-                
+
             </div>
         </div>
     </div>
