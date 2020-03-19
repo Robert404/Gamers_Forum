@@ -11,6 +11,11 @@ namespace Games_Forum.Models.Account
         [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
+        
+        [Required]
+        [Display(Name = "Username")]
+        [StringLength(20, ErrorMessage = "The User Name must be at least 3 digit length", MinimumLength = 3)]
+        public string UserName { get; set; }
 
         [Required]
         [DataType(DataType.Password)]

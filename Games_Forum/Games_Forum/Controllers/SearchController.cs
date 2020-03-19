@@ -24,7 +24,7 @@ namespace Games_Forum.Controllers
         public IActionResult Index(string searchQuery)
         {
             var posts = _postService.GetFilteredPosts(searchQuery).ToList();
-            var areNoResult = (!posts.Any()) && (!String.IsNullOrEmpty(searchQuery));
+            var areNoResult = (!string.IsNullOrEmpty(searchQuery) && !posts.Any());
 
             var postListing = posts.Select(p => new PostListingModel
             {

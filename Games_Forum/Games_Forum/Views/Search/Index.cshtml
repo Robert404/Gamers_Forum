@@ -7,10 +7,7 @@
             <span>Search Result for: @Model.SearchQuery</span>
             <form asp-controller="Search" asp-action="Search" method="post">
                 <div class="searchForm">
-                    <input asp-for="SearchQuery" type="text" placeholder="Search..." class="searchBar" onfocus="clearThis(this)" />
-                    <button type="submit" class="btn buttonSearch">
-                        <i class="material-icons">search</i>
-                    </button>
+                    <input asp-for="SearchQuery" type="text" placeholder="Search..." class="searchBar" onfocus="clearThis(this)" /> 
                 </div>               
             </form>
         </div>

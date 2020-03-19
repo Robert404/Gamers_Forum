@@ -1,4 +1,5 @@
-﻿using Games_Forum.Data.Models;
+﻿using System;
+using Games_Forum.Data.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -16,5 +17,6 @@ namespace Games_Forum.Data
             : base(options)
         {
         }
+
     }
 }
