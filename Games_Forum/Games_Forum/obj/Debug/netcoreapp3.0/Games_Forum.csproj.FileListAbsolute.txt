@@ -463,13 +463,6 @@ C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\G
 C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Games_Forum.TagHelpers.input.cache
 C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Games_Forum.TagHelpers.output.cache
 C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Games_Forum.RazorCoreGenerate.cache
-C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
-C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Logout.cshtml.g.cs
-C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
-C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
-C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
-C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
-C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
 C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Razor\Views\Forum\Index.cshtml.g.cs
 C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Razor\Views\Forum\Topic.cshtml.g.cs
 C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Razor\Views\Home\Index.cshtml.g.cs

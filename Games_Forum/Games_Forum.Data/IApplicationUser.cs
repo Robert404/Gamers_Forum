@@ -1,4 +1,5 @@
 ﻿using Games_Forum.Data.Models;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,8 +9,8 @@ namespace Games_Forum.Data
 {
     public interface IApplicationUser
     {
-        ApplicationUser GetById(string id);
-        IEnumerable<ApplicationUser> GetAll();
+        IdentityUser GetById(string id);
+        IEnumerable<IdentityUser> GetAll();
         Task SetProfileImage(string id, Uri uri);
         Task IncrementRating(string id, Type type);
     }

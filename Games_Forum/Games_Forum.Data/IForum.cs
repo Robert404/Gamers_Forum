@@ -1,4 +1,5 @@
 ﻿using Games_Forum.Data.Models;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -9,7 +10,7 @@ namespace Games_Forum.Data
     {
         Forum GetById(int id);
         IEnumerable<Forum> GetAll();
-        IEnumerable<ApplicationUser> GetAllActiveUsers();
+        IEnumerable<IdentityUser> GetAllActiveUsers();
 
         Task Create(Forum forum);
         Task Delete(int forumId);

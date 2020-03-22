@@ -27,7 +27,7 @@ using Games_Forum.Models;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"66a1141fcec20a31a179dbf090f7e6ef37b21e0a", @"/Views/Search/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1f451ff8e5f9f417dea7c8a904c66ac5683e437e", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9a0f8688ff3c5cd1458388e4c8d81707acf7eedf", @"/Views/_ViewImports.cshtml")]
     public class Views_Search_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Games_Forum.Models.Search.SearchResultModel>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("type", "text", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);

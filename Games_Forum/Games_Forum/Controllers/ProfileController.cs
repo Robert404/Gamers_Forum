@@ -1,6 +1,7 @@
 ﻿using Games_Forum.Data;
 using Games_Forum.Data.Models;
 using Games_Forum.Models.Profile;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -33,12 +34,18 @@ namespace Games_Forum.Controllers
                 Email = user.Email,
                 UserId = user.Id,
                 UserRating = appUser.Rating,
-                MemberSince = user.MemberSince,
+                MemberSince = appUser.MemberSince,
                 IsAdmin = userRoles.Contains("Admin"),
-                ProfileImageUrl = user.ProfileImageUrl
+                ProfileImageUrl = appUser.ProfileImageUrl
             };
 
             return View(model);
         }
+
+        //[HttpPost]
+        //public async Task<IActionResult> UploadProfileImage(IFormFile file) 
+        //{
+        //    var userId = _userManager.GetUserId(User);
+        //}
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Games_Forum.Data;
 using Games_Forum.Data.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -31,7 +32,7 @@ namespace Games_Forum.Service
             return _context.Forums.Include(f => f.Posts); 
         }
 
-        public IEnumerable<ApplicationUser> GetAllActiveUsers()
+        public IEnumerable<IdentityUser> GetAllActiveUsers()
         {
             throw new NotImplementedException();
         }
