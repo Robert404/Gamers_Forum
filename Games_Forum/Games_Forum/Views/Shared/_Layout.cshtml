@@ -25,7 +25,6 @@
                     <partial name="_LoginPartial" />
                     <a asp-controller="Profile" asp-action="Detail" asp-route-id="@UserManager.GetUserId(User)">MyProfile</a>
                     <ul class="navbar-nav flex-grow-1">
-                        <li><a asp-controller="Forum" asp-action="Index">Forums</a></li>
                         @if (SignInManager.IsSignedIn(User))
                         {
                             <li class="dropdown">

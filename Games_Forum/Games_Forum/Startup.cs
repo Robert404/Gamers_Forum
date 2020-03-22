@@ -10,6 +10,7 @@ using Microsoft.Extensions.Hosting;
 using Games_Forum.Data;
 using Games_Forum.Service;
 using Games_Forum.Data.Models;
+using System.Threading.Tasks;
 
 namespace Games_Forum
 {
@@ -35,12 +36,11 @@ namespace Games_Forum
             services.AddScoped<IUpload, UploadService>();
             services.AddScoped<IApplicationUser, ApplicationUserService>();
             services.AddControllersWithViews();
-            services.AddTransient<SeedData>();
             services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, SeedData seedData)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider services)
         {
             if (env.IsDevelopment())
             {
@@ -53,7 +53,6 @@ namespace Games_Forum
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-            seedData.SeedAdminUser().Wait();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
@@ -69,6 +68,25 @@ namespace Games_Forum
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
+
+            CreateRoles(services).Wait();
+        }
+
+        public async Task CreateRoles(IServiceProvider serviceProvider)
+        {
+            var RoleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+            var UserManager = serviceProvider.GetRequiredService<UserManager<IdentityUser>>();
+
+            IdentityResult roleResult;
+            var roleCheck = await RoleManager.RoleExistsAsync("Admin");
+            if (!roleCheck)
+            {
+                roleResult = await RoleManager.CreateAsync(new IdentityRole("Admin"));
+            }
+
+            IdentityUser user = await UserManager.FindByIdAsync("b0f7dba2-12cd-445c-9a18-5f34fa7737cb");
+            var User = new IdentityUser();
+            await UserManager.AddToRoleAsync(user, "Admin");
         }
     }
 }
