@@ -14,7 +14,7 @@ namespace Games_Forum.Data
         IEnumerable<Post> GetPostsByForum(int id);
         IEnumerable<Post> GetLatestPosts(int n);
 
-
+        Task AddReply(PostReply reply);
         Task Add(Post post);
         Task Delete(int id);
         Task EditPostContent(int id, string newContent);
