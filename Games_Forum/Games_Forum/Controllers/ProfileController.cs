@@ -42,10 +42,20 @@ namespace Games_Forum.Controllers
             return View(model);
         }
 
-        //[HttpPost]
-        //public async Task<IActionResult> UploadProfileImage(IFormFile file) 
-        //{
-        //    var userId = _userManager.GetUserId(User);
-        //}
+        public IActionResult Index() 
+        {
+            var profiles = _userService.GetAll().Select(u => new ProfileModel
+            {
+                Email = u.Email,
+                UserName = u.UserName,
+                UserId = u.Id
+            });
+
+            var model = new ProfileListModel
+            {
+                Profiles = profiles
+            };
+            return View(model);
+        }
     }
 }

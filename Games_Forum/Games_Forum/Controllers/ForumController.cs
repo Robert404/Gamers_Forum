@@ -21,18 +21,22 @@ namespace Games_Forum.Controllers
             _postService = postService;
         }
 
-        public IActionResult Index() 
+        public IActionResult Index()
         {
-            var forums = _forumService.GetAll().Select(forum => new ForumListingModel {
+            var forums = _forumService.GetAll().Select(forum => new ForumListingModel
+            {
                 Id = forum.Id,
                 Name = forum.Title,
                 Description = forum.Description,
-                ImageUrl = forum.ImageUrl
+                ImageUrl = forum.ImageUrl,
+                NumberOfPosts = forum.Posts?.Count() ?? 0,
+                NumberOfUsers = _forumService.GetAllActiveUsers(forum.Id).Count(),
+                HasRecentPost = _forumService.HasRecentPost(forum.Id)
             });
 
             var model = new ForumIndexModel
             {
-                ForumList = forums,
+                ForumList = forums.OrderBy(f => f.Name)
             };
 
             return View(model);
@@ -40,9 +44,9 @@ namespace Games_Forum.Controllers
 
         public IActionResult Topic(int id, string searchQuery)
         {
-            var forum = _forumService.GetById(id);                         
+            var forum = _forumService.GetById(id);
             var posts = new List<Post>();
-            
+
             posts = _postService.GetFilteredPosts(forum, searchQuery).ToList();
 
             var postListings = posts.Select(post => new PostListingModel

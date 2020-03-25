@@ -55,7 +55,7 @@
                     {
 
                         <ul class="nav navbar-nav navbar-right">
-                            <li>Hello, @UserManager.GetUserName(User) &ensp;</li>
+                            <li>Hello, <a asp-controller="Profile" asp-action="Detail" asp-route-id="@UserManager.GetUserId(User)">@UserManager.GetUserName(User)</a> &ensp;</li>
                             <li><a asp-controller="Account" asp-action="Logout">Logout &ensp;</a></li>
                         </ul>
                     }

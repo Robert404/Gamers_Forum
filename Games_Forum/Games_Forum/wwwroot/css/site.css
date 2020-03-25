@@ -224,8 +224,10 @@ body {
     display: inline-block;
 }
 
-.postData {
-    display: inline-block;
+.postDate {
+    color: #888;
+    font-family: 'Roboto Mono';
+    font-size: 0.8em;
 }
 
 .postDate {
@@ -294,6 +296,13 @@ body {
     float: right;
     margin-left: 600px;
     margin-top: 10px;
+}
+
+#originalPost {
+    background-color: #fff;
+    padding: 12px;
+    margin-bottom: 8px;
+    text-align: center;
 }
 
 /*Buttons*/
@@ -460,6 +469,15 @@ body {
     padding-right: 15px;
 }
 
+.hasRecentPost {
+    padding: 2px;
+    background-color: #c22020;
+    color: #fff;
+    text-align: center;
+    border-radius: 1px;
+    width: 30px;
+}
+
 /*Forum Topic Page*/
 
 .searchBar {
@@ -494,3 +512,39 @@ body {
     font-size: 1.7em;
 }
 
+
+/*Replies*/
+.replyContent {
+    display: table;
+    background-color: #fff;
+    border-bottom: 1px solid #aaa;
+    width: 1110px;
+}
+
+#postReplyRow {
+    background-color: #3F51B5;
+    padding: 8px;
+}
+
+.replyContentContainer, .replyAuthorContainer {
+    display: table-cell;
+    padding: 12px;
+    width: initial;
+}
+
+.isAdmin {
+    display: inline-block;
+    padding: 3px;
+    background-color: #FFEB3B;
+    color: #000;
+    font-family: 'Roboto Mono';
+}
+
+.smaller {
+    font-size: 0.8em;
+}
+
+#replyDivider {
+    height: 2px;
+    margin-bottom: 20px;
+}
