@@ -16,9 +16,10 @@ namespace Games_Forum.Controllers
         private readonly UserManager<IdentityUser> _userManager;
         ApplicationUser appUser = new ApplicationUser();
 
-        public ReplyController(IPost postService) 
+        public ReplyController(IPost postService, UserManager<IdentityUser> userManager) 
         {
             _postService = postService;
+            _userManager = userManager;
         }
         public async Task<IActionResult> Create(int id) 
         {
@@ -32,15 +33,13 @@ namespace Games_Forum.Controllers
                 PostId = post.Id,
                 AuthorId = user.Id,
                 AuthorName = user.UserName,
-                AuthorImageUrl = appUser.ProfileImageUrl,
-                AuthorRating = appUser.Rating,
                 IsAuthorAdmin = User.IsInRole("Admin"),
                 Created = DateTime.Now,
                 ForumId = post.Forum.Id,
                 ForumName = post.Forum.Title,
                 ForumImageUrl = post.Forum.ImageUrl, 
             };
-            return View();
+            return View(model);
         }
 
         [HttpPost]
@@ -50,6 +49,7 @@ namespace Games_Forum.Controllers
             var user = await _userManager.FindByIdAsync(userId);
 
             var reply = BuildReply(model, user);
+
 
             await _postService.AddReply(reply);
             return RedirectToAction("Index", "Post", new { id = model.PostId});

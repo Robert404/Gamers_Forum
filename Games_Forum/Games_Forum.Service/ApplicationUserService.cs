@@ -30,7 +30,7 @@ namespace Games_Forum.Service
 
         public Task IncrementRating(string id, Type type)
         {
-            throw new NotImplementedException();
+            throw new Exception();
         }
 
         public async Task SetProfileImage(string id, Uri uri)

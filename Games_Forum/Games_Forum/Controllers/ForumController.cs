@@ -71,6 +71,45 @@ namespace Games_Forum.Controllers
             return RedirectToAction("Topic", new { id, searchQuery });
         }
 
+        public IActionResult Create() 
+        {
+            var model = new AddForumModel();
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddForum(AddForumModel model) 
+        {
+            var imageUrl = "";
+            if (model.ImageUrl == null)
+            {
+                var forum = new Forum
+                {
+                    Title = model.Title,
+                    Description = model.Description,
+                    Created = DateTime.Now,
+                    ImageUrl = imageUrl
+                };
+
+                await _forumService.Create(forum);
+            }
+
+            else 
+            {
+                var forum = new Forum
+                {
+                    Title = model.Title,
+                    Description = model.Description,
+                    Created = DateTime.Now,
+                    ImageUrl = model.ImageUrl
+                };
+
+                await _forumService.Create(forum);
+            }
+
+            return RedirectToAction("Index","Forum");
+        }
+
         private ForumListingModel BuildForumListing(Post post)
         {
             var forum = post.Forum;

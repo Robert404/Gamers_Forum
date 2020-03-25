@@ -97,8 +97,6 @@ namespace Games_Forum.Controllers
                 Id = r.Id,
                 AuthorId = r.User.Id,
                 AuthorName = r.User.UserName,
-                AuthorImageUrl = r.User.ProfileImageUrl,
-                AuthorRating = r.User.Rating,
                 Created = r.Created,
                 PostId = r.Post.Id,
                 ReplyContent = r.Content,

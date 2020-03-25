@@ -22,9 +22,10 @@ namespace Games_Forum.Service
             await _context.SaveChangesAsync();
         }
 
-        public Task AddReply(PostReply reply)
+        public async Task AddReply(PostReply reply)
         {
-            throw new NotImplementedException();
+            _context.PostReplies.Add(reply);
+            await _context.SaveChangesAsync();
         }
 
         public Task Delete(int id)
