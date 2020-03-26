@@ -1,36 +1,45 @@
 ﻿@model Games_Forum.Models.Post.NewPostModel
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
 
 <h1>New Post | @Model.ForumName</h1>
 
-<div class="container body-content">
-    <div class="sectionHeader">
-        <div class="sectionHeading noBorder">
-            New Post | @Model.ForumName
-            <div class="forumLogo" style="background-image: url(@Model.ForumImageUrl)"></div>
-            <span id="headingBtn">
-                <a asp-controller="Forum" asp-action="Topic" asp-route-id="@Model.ForumId" class="btn btn-back">
-                    Back to @Model.ForumName
-                </a>
-            </span>
-        </div>
-    </div>
-    <div class="row">
-        <div class="createPostSection">
-            <div class="authorBlock">
-                You are posting this as <strong>@Model.AuthorName</strong>
+@if (User.Identity.IsAuthenticated)
+{
+    <div class="container body-content">
+        <div class="sectionHeader">
+            <div class="sectionHeading noBorder">
+                New Post | @Model.ForumName
+                <div class="forumLogo" style="background-image: url(@Model.ForumImageUrl)"></div>
+                <span id="headingBtn">
+                    <a asp-controller="Forum" asp-action="Topic" asp-route-id="@Model.ForumId" class="btn btn-back">
+                        Back to @Model.ForumName
+                    </a>
+                </span>
             </div>
-            <form asp-action="AddPost" method="post" id="addPostForm">
-                <div class="form-group">
-                    <label asp-for="Title"></label>
-                    <input asp-for="Title" />
+        </div>
+        <div class="row">
+            <div class="createPostSection">
+                <div class="authorBlock">
+                    You are posting this as <strong>@Model.AuthorName</strong>
                 </div>
-                <div class="form-group">
-                    <label asp-for="Content"></label>
-                    <textarea asp-for="Content" class="form-control"></textarea>
-                </div>
-                <button class="btn btn-submitPost" type="submit" id="submitPostBtn">Submit</button>
-                <input type="hidden" asp-for="ForumId" />
-            </form>
+                <form asp-action="AddPost" method="post" id="addPostForm">
+                    <div class="form-group">
+                        <label asp-for="Title"></label>
+                        <input asp-for="Title" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Content"></label>
+                        <textarea asp-for="Content" class="form-control"></textarea>
+                    </div>
+                    <button class="btn btn-submitPost" type="submit" id="submitPostBtn">Submit</button>
+                    <input type="hidden" asp-for="ForumId" />
+                </form>
+            </div>
         </div>
     </div>
-</div>
+}
+else 
+{
+    <h3>Please <a asp-controller="Account" asp-action="Login">Sign in</a> to create a Post</h3>
+}

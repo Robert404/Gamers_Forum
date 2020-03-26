@@ -1,34 +1,41 @@
 ﻿@model Games_Forum.Models.Profile.ProfileListModel
 
-<div class="container body-content">
-    <div class="row sectionHeader">
-        <div class="sectionHeading">All Users</div>
-    </div>
-    <div class="row" id="forumIndexContent">
-        <table class="table table-hover" id="userIndexTable">
-            <thead>
-                <tr>
-                    <th>Username</th>
-                    <th>Email</th>
-                    <th>Id</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var profile in Model.Profiles) 
-                {
-                    <tr class="userRow">
-                        <td>
-                            @profile.UserName
-                        </td>
-                        <td>
-                            @profile.Email
-                        </td>
-                        <td>
-                            @profile.UserId
-                        </td>
+@if (User.IsInRole("Admin"))
+{
+    <div class="container body-content">
+        <div class="row sectionHeader">
+            <div class="sectionHeading">All Users</div>
+        </div>
+        <div class="row" id="forumIndexContent">
+            <table class="table table-hover" id="userIndexTable">
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Id</th>
                     </tr>
-                }
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    @foreach (var profile in Model.Profiles)
+                    {
+                        <tr class="userRow">
+                            <td>
+                                @profile.UserName
+                            </td>
+                            <td>
+                                @profile.Email
+                            </td>
+                            <td>
+                                @profile.UserId
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
     </div>
-</div>
+}
+else 
+{
+    <h3>Only Admin allowed to see all Users on our Forum</h3>
+}
