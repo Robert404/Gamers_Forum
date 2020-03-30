@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Games_Forum", "Games_Forum\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Games_Forum.Data", "Games_Forum.Data\Games_Forum.Data.csproj", "{1C7E49E4-B8CA-4C67-886E-9CB7CEF23F92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Games_Forum.Service", "Games_Forum.Service\Games_Forum.Service.csproj", "{46A975DE-A678-452F-AF41-FC012431839E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Games_Forum.Service", "Games_Forum.Service\Games_Forum.Service.csproj", "{46A975DE-A678-452F-AF41-FC012431839E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

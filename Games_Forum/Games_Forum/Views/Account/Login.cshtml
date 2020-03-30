@@ -1,24 +1,24 @@
 ﻿@model Games_Forum.Models.Account.LoginViewModel
 
-<h2>Вход в приложение</h2>
-<form method="post" asp-controller="Account" asp-action="Login"
+<h2 class="signInText">Sign In</h2>
+<form method="post" class="registerForm" asp-controller="Account" asp-action="Login"
       asp-route-returnUrl="@Model.ReturnUrl">
-    <div asp-validation-summary="ModelOnly"></div>
+    <div asp-validation-summary="ModelOnly" ></div>
     <div class="form-group">
         <label asp-for="UserName">Username</label><br />
-        <input asp-for="UserName" />
+        <input asp-for="UserName" class="loginLabel" />
         <span asp-validation-for="UserName"></span>
     </div>
     <div class="form-group">
         <label asp-for="Password"></label><br />
-        <input asp-for="Password" />
+        <input asp-for="Password" class="loginLabel" />
         <span asp-validation-for="Password"></span>
     </div>
     <div class="form-group">
         <label asp-for="RememberMe"></label><br />
-        <input asp-for="RememberMe" />
+        <input asp-for="RememberMe" class="loginLabel" />
     </div>
     <div>
-        <input type="submit" value="Войти" />
+        <input type="submit" value="Login" class="btn btn-primary loginBtn" />
     </div>
 </form>

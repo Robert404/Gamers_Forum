@@ -1,30 +1,30 @@
 ﻿@model Games_Forum.Models.Account.RegisterViewModel
 
-<h2>Регистрация нового пользователя</h2>
+<h2 class="signUpText">Sign Up of a New User</h2>
 
-<form method="post" asp-controller="Account" asp-action="Register">
+<form method="post" class="registerForm" asp-controller="Account" asp-action="Register">
     <div asp-validation-summary="ModelOnly"></div>
     <div>
         <label asp-for="Email"></label><br />
-        <input asp-for="Email" />
+        <input asp-for="Email" class="registerLabel" />
         <span asp-validation-for="Email"></span>
     </div>
     <div>
         <label asp-for="UserName"></label><br />
-        <input asp-for="UserName" />
+        <input asp-for="UserName" class="registerLabel" />
         <span asp-validation-for="UserName"></span>
     </div>
     <div>
         <label asp-for="Password"></label><br />
-        <input asp-for="Password" />
+        <input asp-for="Password" class="registerLabel" />
         <span asp-validation-for="Password"></span>
     </div>
     <div>
         <label asp-for="PasswordConfirm"></label><br />
-        <input asp-for="PasswordConfirm" />
+        <input asp-for="PasswordConfirm" class="registerLabel" />
         <span asp-validation-for="PasswordConfirm"></span>
     </div>
     <div>
-        <input type="submit" value="Регистрация" />
+        <input type="submit" value="Sign Up" class="btn btn-primary registerBtn" />
     </div>
 </form>
