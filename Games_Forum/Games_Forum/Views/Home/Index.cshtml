@@ -1,10 +1,11 @@
 ﻿@model Games_Forum.Models.Home.HomeIndexModel
 
+<title>Games Forum</title>
 <div class="container body-content">
     <div class="row frontPageSplash">
         <div class="col-md-6 frontPageLearn">
             <div class="frontPageHeading">Learn, Collaborate, Share Knowledge</div>
-            <p class="frontPageSubHeading">Worlds Best Forum</p>
+            <p class="frontPageSubHeading">Forum For Gamers</p>
             <div>
                 <form asp-controller="Search" asp-action="Search" method="post">
                     <input asp-for="SearchQuery" type="text" class="homeSearch" placeholder="Search..." />

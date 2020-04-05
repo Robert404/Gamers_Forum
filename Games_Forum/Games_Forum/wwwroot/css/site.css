@@ -240,6 +240,7 @@ body {
     font-family: 'Roboto Mono';
     font-weight: bold;
     transition: ease-in 0.2s;
+    border-radius: 6px;
 }
 
     .homeSearch:focus {
@@ -301,7 +302,8 @@ body {
 .createPostSection {
     background-color: #fff;
     padding: 24px;
-}
+    margin-left: 15px;
+}   
 
 .postAuthorImage {
     background-image:url(/images/users/s1mple.jpeg) !important;
@@ -309,6 +311,7 @@ body {
     width: 80px;
     background-size: 100%;
 }
+
 
 .postAuthorContainer {
     padding: 12px;
@@ -464,7 +467,6 @@ body {
     height: 40px;
     width: 40px;
     background-color: #ddd;
-    border: 1px solid #555;
     background-size: 100%;
 }
 
@@ -533,21 +535,28 @@ body {
 /*Forum Topic Page*/
 
 .searchBar {
-    background-color: #555;
+    background-color: #888;
     width: 60%;
     transition: ease .3s;
     border: none;
+    border-radius: 3px;
 }
     .searchBar:focus {
         color: black;
         width: 80%;
-        background-color: #fff;
+        background-color: #e9e7e7;
+        border-radius: 2px;
     }
 
 /*User Profiles*/
 .userProfile {
     padding: 32px 0 64px 24px;
     background-color: #fff;
+}
+
+.userProfileImage {
+    background-image: url(/images/users/s1mple.jpeg) !important;
+    background-size: 100%;
 }
 
 #userEmailLabel, #userBioLabel, #userCreatedLabel, #userRating, #userActiveLabel {
@@ -572,6 +581,8 @@ body {
     border-bottom: 1px solid #aaa;
     width: 1110px;
 }
+
+
 
 #postReplyRow {
     background-color: #3F51B5;

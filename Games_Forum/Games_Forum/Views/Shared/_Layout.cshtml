@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Games Forum</title>
+    <link rel="icon" href="https://ak4.picdn.net/shutterstock/videos/1021390714/thumb/10.jpg" class="titleLogo">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
@@ -19,30 +19,15 @@
                 <a class="navbar-brand navLogo" asp-controller="Home" asp-action="Index"></a>
                 <ul class="navbar-nav flex-grow-1">
                     <li><a asp-controller="Home" asp-action="Index">Home &ensp;</a></li>
-                    <li><a asp-controller="Forum" asp-action="Index">Forums</a></li>
+                    <li><a asp-controller="Forum" asp-action="Index">Forums &ensp;</a></li>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <li><a asp-controller="Forum" asp-action="Create">Create Forum &ensp;</a></li>
+                        <li><a asp-controller="Profile" asp-action="index">View Users</a></li>
+                    }
                 </ul>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <partial name="_LoginPartial" />
-                    <ul class="navbar-nav flex-grow-1">
-                        @if (SignInManager.IsSignedIn(User))
-                        {
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Settings<span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li role="separator" class="divider"></li>
-                                    <li class="dropdown-header">Profile</li>
-                                    <li><a asp-controller="Profile" asp-action="Detail" asp-route-id="@UserManager.GetUserId(User)">MyProfile</a></li>
-                                    @if (User.IsInRole("Admin"))
-                                    {
-                                        <li role="separator" class="divider"></li>
-                                        <li class="dropdown-header">Admin</li>
-                                        <li><a asp-controller="Forum" asp-action="Create">Create Forum</a></li>
-                                        <li><a asp-controller="Profile" asp-action="index">View Users</a></li>
-                                    }
-                                </ul>
-                            </li>
-                        }
-                    </ul>
                     @if (!SignInManager.IsSignedIn(User))
                     {
                         <ul class="nav navbar-nav navbar-right userOperations">
@@ -69,7 +54,7 @@
         </main>
     </div>
 
-    
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

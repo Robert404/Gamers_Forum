@@ -466,7 +466,6 @@ C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\G
 C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Razor\Views\Forum\Index.cshtml.g.cs
 C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Razor\Views\Forum\Topic.cshtml.g.cs
 C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Razor\Views\Home\Index.cshtml.g.cs
-C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Razor\Views\Post\Create.cshtml.g.cs
 C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Razor\Views\Post\Index.cshtml.g.cs
 C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Razor\Views\Shared\Error.cshtml.g.cs

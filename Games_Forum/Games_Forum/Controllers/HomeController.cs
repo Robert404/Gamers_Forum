@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Games_Forum.Models;
@@ -34,7 +33,7 @@ namespace Games_Forum.Controllers
 
         private HomeIndexModel BuildHomeIndexModel()
         {
-            var latestPosts = _postService.GetLatestPosts(1);
+            var latestPosts = _postService.GetLatestPosts(5);
 
             var posts = latestPosts.Select(p => new PostListingModel
             {
@@ -67,10 +66,7 @@ namespace Games_Forum.Controllers
             };
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+       
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

@@ -25,6 +25,7 @@ namespace Games_Forum.Controllers
         {
             var posts = _postService.GetFilteredPosts(searchQuery).ToList();
             var areNoResult = (!string.IsNullOrEmpty(searchQuery) && !posts.Any());
+           
 
             var postListing = posts.Select(p => new PostListingModel
             {
@@ -43,7 +44,9 @@ namespace Games_Forum.Controllers
                 Posts = postListing,
                 SearchQuery = searchQuery,
                 EmptySearchResult = areNoResult
+                
             };
+
 
             return View(model);
         }
