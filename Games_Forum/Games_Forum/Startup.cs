@@ -33,7 +33,7 @@ namespace Games_Forum
             .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddScoped<IForum, ForumService>();
             services.AddScoped<IPost, PostService>();
-            services.AddScoped<IUpload, UploadService>();
+            services.AddScoped<IReply, ReplyService>();
             services.AddScoped<IApplicationUser, ApplicationUserService>();
             services.AddControllersWithViews();
             services.AddRazorPages();

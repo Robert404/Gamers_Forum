@@ -1,78 +1,92 @@
 ﻿@model Games_Forum.Models.Post.PostIndexModel
 <title>@Model.Title</title>
 
-    <div class="container body-content">
-        <div class="row postHeading">
-            <div class="postHeading">
-                <span class="postIndexTitle">
-                    @Model.Title
-                </span>
-                <span id="headingBtn">
-                    <a asp-controller="Forum" asp-action="Topic" asp-route-id="@Model.ForumId" class="btn btn-back">Back To @Model.ForumName</a>
-                </span>
-            </div>
-        </div>
-
-
-        <div class="row" id="postIndexContent">
-            <div class="col-md-3 postAuthorContainer">
-                <div class="postAuthorImage"></div>
-                <a asp-controller="Profile" asp-action="Detail" asp-route-id="@Model.AuthorId">@Model.AuthorName</a>
-                <span class="postDate">@Model.Created</span>
-                @if (Model.IsAuthorAdmin)
-                {
-                    <span class="isAdmin smaller">Admin</span>
-                }
-            </div>
-            <div class="col-md-9 postContentContainer">
-                <div class="postConetnt">
-                    @Html.Raw(Model.PostContent)
-                </div>
-            </div>
-        </div>
-        <div class="row" id="replyDivider"></div>
-
-        @if (User.Identity.IsAuthenticated)
-        {
-            <div class="row" id="postReplyRow">
-                <span>
-                    <a asp-controller="Reply" asp-action="Create" asp-route-id="@Model.Id" class="btn btn-newReply">Post Reply</a>
-                </span>
-            </div>
-        }
-
-        @if (Model.Replies.Any())
-        {
-            foreach (var reply in Model.Replies)
+<div class="container body-content">
+    <div class="row postHeading">
+        <div class="postHeading">
+            <span class="postIndexTitle">
+                @Model.Title
+            </span>
+            <span id="headingBtn">
+                <a asp-controller="Forum" asp-action="Topic" asp-route-id="@Model.ForumId" class="btn btn-back">Back To @Model.ForumName</a>
+            </span>
+            @if (User.Identity.Name == Model.AuthorName || User.IsInRole("Admin"))
             {
-                <div class="row replyContent">
-                    <div class="col-md-3 replyAuthorContainer">
-                        <div class="postAuthorImage" style="background-image: url()"></div>
-                        <a asp-controller="Profile" asp-action="Detail" asp-route-id="@reply.AuthorId">
-                            @reply.AuthorName
-                        </a>
-                        @if (reply.IsAuthorAdmin)
-                        {
-                            <div class="isAdmin smaller">Admin</div>
-                            <br />
-                        }
-                        <span class="postDate">@reply.Created</span>
-                    </div>
-                    <div class="col-md-9 replyContentContainer">
-                        <div class="postContent">
-                            @Html.Raw(reply.ReplyContent)
-                        </div>
+                <span id="postDeleteBtn">
+                    <a asp-controller="Post" asp-action="DeletePost" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
+                </span>
+            }
+
+        </div>
+    </div>
+
+
+    <div class="row" id="postIndexContent">
+        <div class="col-md-3 postAuthorContainer">
+            <div class="postAuthorImage"></div>
+            <a asp-controller="Profile" asp-action="Detail" asp-route-id="@Model.AuthorId">@Model.AuthorName</a>
+            <span class="postDate">@Model.Created</span>
+            @if (Model.IsAuthorAdmin)
+            {
+                <span class="isAdmin smaller">Admin</span>
+            }
+        </div>
+        <div class="col-md-9 postContentContainer">
+            <div class="postContent">
+                @Html.Raw(Model.PostContent)
+            </div>
+        </div>
+    </div>
+    <div class="row" id="replyDivider"></div>
+
+    @if (User.Identity.IsAuthenticated)
+    {
+        <div class="row" id="postReplyRow">
+            <span>
+                <a asp-controller="Reply" asp-action="Create" asp-route-id="@Model.Id" class="btn btn-newReply">Post Reply</a>
+            </span>
+        </div>
+    }
+
+    @if (Model.Replies.Any())
+    {
+        foreach (var reply in Model.Replies)
+        {
+            <div class="row replyContent">
+                <div class="col-md-3 replyAuthorContainer">
+                    <div class="postAuthorImage" style="background-image: url()"></div>
+                    <a asp-controller="Profile" asp-action="Detail" asp-route-id="@reply.AuthorId">
+                        @reply.AuthorName
+                    </a>
+                    @if (reply.IsAuthorAdmin)
+                    {
+                        <div class="isAdmin smaller">Admin</div>
+                        <br />
+                    }
+                    <span class="postDate">@reply.Created</span>
+                </div>
+                <div class="col-md-9 replyContentContainer">
+                    <div class="postContent">
+                        @Html.Raw(reply.ReplyContent)
                     </div>
                 </div>
-            }
-        }
-        else
-        {
-            <div class="noPosts">
-                <h3>
-                    There are no replies to this post
-                </h3>
+                @if (User.Identity.Name == reply.AuthorName)
+                {
+                    <div>
+                        <a asp-controller="Reply" asp-action="DeleteReply" asp-route-id="@reply.Id" class="btn btn-danger">Delete</a>
+                    </div>
+                }
+
             </div>
         }
-    </div>
+    }
+    else
+    {
+        <div class="noPosts">
+            <h3>
+                There are no replies to this post
+            </h3>
+        </div>
+    }
+</div>
 

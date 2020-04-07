@@ -49,7 +49,6 @@ namespace Games_Forum.Controllers
             return View(model);
         }
 
-        
 
         public IActionResult Create(int id) 
         {
@@ -65,8 +64,15 @@ namespace Games_Forum.Controllers
             return View(model);
         }
 
+        public async Task<IActionResult> DeletePost(int id)
+        {
+            await _postService.Delete(id);
+            return RedirectToAction("Index", "Home");
+        }
+
+
         [HttpPost]
-        public async Task<IActionResult> AddPost(NewPostModel model) 
+        public async Task<IActionResult> AddPost(NewPostModel model)
         {
             var userId = _userManager.GetUserId(User);
             var user =  _userManager.FindByIdAsync(userId).Result;

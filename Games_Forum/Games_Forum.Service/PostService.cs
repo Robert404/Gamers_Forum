@@ -28,9 +28,11 @@ namespace Games_Forum.Service
             await _context.SaveChangesAsync();
         }
 
-        public Task Delete(int id)
+        public async Task Delete(int id)
         {
-            throw new NotImplementedException();
+            var post = GetById(id);
+             _context.Remove(post);
+            await _context.SaveChangesAsync();
         }
 
         public Task EditPostContent(int id, string newContent)

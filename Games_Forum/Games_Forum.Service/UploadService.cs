@@ -5,8 +5,5 @@ using System.Text;
 
 namespace Games_Forum.Service
 {
-    public class UploadService:IUpload
-    {
-
-    }
+    
 }

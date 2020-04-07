@@ -331,6 +331,11 @@ body {
     border-left: 1px solid #ddd;
 }
 
+.postContent {
+    margin-right: 400px;
+    padding-top: 20px;
+}
+
 .postAuthorRating {
     font-size: 0.9em;
     color: #159;
@@ -427,8 +432,8 @@ body {
     }
 
 
-/*Forums*/
 
+/*Forums*/
 #forumIndexTable td {
     background-color: rgba(255,255,255,0.9);
 }

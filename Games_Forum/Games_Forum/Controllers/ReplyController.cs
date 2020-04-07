@@ -13,6 +13,7 @@ namespace Games_Forum.Controllers
     public class ReplyController:Controller
     {
         private readonly IPost _postService;
+        private readonly IReply _replyService;
         private readonly UserManager<IdentityUser> _userManager;
         ApplicationUser appUser = new ApplicationUser();
 
@@ -55,6 +56,11 @@ namespace Games_Forum.Controllers
             return RedirectToAction("Index", "Post", new { id = model.PostId});
         }
 
+        public async Task<IActionResult> DeleteReply(int replyId) 
+        {
+            await _replyService.Delete(replyId);
+            return RedirectToAction("Index","Home");
+        }
 
         private PostReply BuildReply(PostReplyModel model, IdentityUser user)
         {

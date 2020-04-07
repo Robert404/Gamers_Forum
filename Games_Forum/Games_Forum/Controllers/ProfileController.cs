@@ -16,12 +16,10 @@ namespace Games_Forum.Controllers
         ApplicationUser appUser = new ApplicationUser();
         private readonly UserManager<IdentityUser> _userManager;
         private readonly IApplicationUser _userService;
-        private readonly IUpload _uploadService;
-        public ProfileController(UserManager<IdentityUser> userManager, IApplicationUser userService, IUpload uploadService) 
+        public ProfileController(UserManager<IdentityUser> userManager, IApplicationUser userService) 
         {
             _userManager = userManager;
             _userService = userService;
-            _uploadService = uploadService;
         }
 
         public IActionResult Detail(string id) 

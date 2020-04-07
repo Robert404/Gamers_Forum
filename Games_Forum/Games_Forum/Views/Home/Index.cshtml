@@ -29,15 +29,15 @@
                                 </a>
                             </div>
                             <div class="postSubtitle">
-                                @if (post.RepliesCount == 1)
-                                {
-                                    <span>@post.RepliesCount Reply</span>
-                                }
                                 @if (post.RepliesCount == 0)
                                 {
                                     <span>No Replies</span>
                                 }
-                                else 
+                                @if (post.RepliesCount == 1)
+                                {
+                                    <span>@post.RepliesCount Reply</span>
+                                }
+                                @if (post.RepliesCount > 1)
                                 {
                                     <span>@post.RepliesCount Replies</span>
                                 }

@@ -48,6 +48,14 @@
                                 @forum.Description
                             </div>
                         </td>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <td>
+                                <a asp-controller="Forum" asp-action="DeleteForum" asp-route-id="@forum.Id" class="btn btn-danger">Delete</a>
+                            </td>
+
+                        }
+
                     </tr>
                 }
 
