@@ -17,6 +17,7 @@ namespace Games_Forum.Data
         Task AddReply(PostReply reply);
         Task Add(Post post);
         Task Delete(int id);
+        Task Edit(Post post);
         Task EditPostContent(int id, string newContent);
         
     }

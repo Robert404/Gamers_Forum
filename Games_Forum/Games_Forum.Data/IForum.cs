@@ -14,8 +14,7 @@ namespace Games_Forum.Data
 
         Task Create(Forum forum);
         Task Delete(int forumId);
-        Task UpdateForumTitle(int forumId,string newTitle);
-        Task UpdateForumDescription(int forumId, string newDescription);
+        Task Edit(Forum forum);
         IEnumerable<IdentityUser> GetAllActiveUsers(int id);
         bool HasRecentPost(int id);
     }    

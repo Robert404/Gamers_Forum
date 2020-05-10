@@ -14,11 +14,13 @@ namespace Games_Forum.Controllers
     {
         private readonly IForum _forumService;
         private readonly IPost _postService;
+        ApplicationDbContext _context;
         ApplicationUser appUser = new ApplicationUser();
-        public ForumController(IForum forumService, IPost postService)
+        public ForumController(IForum forumService, IPost postService, ApplicationDbContext context)
         {
             _forumService = forumService;
             _postService = postService;
+            _context = context;
         }
 
         public IActionResult Index()
@@ -114,9 +116,31 @@ namespace Games_Forum.Controllers
             return RedirectToAction("Index","Forum");
         }
 
-        public async Task<IActionResult> DeleteForum(int forumId) 
+
+        public IActionResult Edit(int id)
+        { 
+            var model = new ForumListingModel();
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditForum(ForumListingModel model, int id) 
         {
-            await _forumService.Delete(forumId);
+            var forum = _forumService.GetById(id);
+
+            forum.Title = model.Name;
+            forum.Description = model.Description;
+            forum.ImageUrl = model.ImageUrl;
+            forum.Created = DateTime.Now;
+
+
+            await _forumService.Edit(forum);
+            return RedirectToAction("Index", "Forum");
+        }
+
+        public async Task<IActionResult> DeleteForum(int id) 
+        {
+            await _forumService.Delete(id);
             return RedirectToAction("Index","Home");
         }
 

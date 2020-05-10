@@ -17,10 +17,11 @@ namespace Games_Forum.Controllers
         private readonly UserManager<IdentityUser> _userManager;
         ApplicationUser appUser = new ApplicationUser();
 
-        public ReplyController(IPost postService, UserManager<IdentityUser> userManager) 
+        public ReplyController(IPost postService, UserManager<IdentityUser> userManager, IReply replyService) 
         {
             _postService = postService;
             _userManager = userManager;
+            _replyService = replyService;
         }
         public async Task<IActionResult> Create(int id) 
         {
@@ -56,9 +57,9 @@ namespace Games_Forum.Controllers
             return RedirectToAction("Index", "Post", new { id = model.PostId});
         }
 
-        public async Task<IActionResult> DeleteReply(int replyId) 
+        public async Task<IActionResult> DeleteReply(int id) 
         {
-            await _replyService.Delete(replyId);
+            await _replyService.Delete(id);
             return RedirectToAction("Index","Home");
         }
 

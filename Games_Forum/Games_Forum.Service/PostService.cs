@@ -35,6 +35,12 @@ namespace Games_Forum.Service
             await _context.SaveChangesAsync();
         }
 
+        public async Task Edit(Post post)
+        {
+            _context.Update(post);
+            await _context.SaveChangesAsync();
+        }
+
         public Task EditPostContent(int id, string newContent)
         {
             throw new NotImplementedException();
@@ -54,7 +60,7 @@ namespace Games_Forum.Service
                 .Include(post => post.User)
                 .Include(post => post.Replies)
                     .ThenInclude(post => post.User)
-                .Include(post => post.Forum).First();
+                .Include(post => post.Forum).FirstOrDefault();
         }
 
         public IEnumerable<Post> GetFilteredPosts(Forum forum ,string searchQuery)

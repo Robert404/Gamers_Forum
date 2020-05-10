@@ -30,6 +30,12 @@ namespace Games_Forum.Service
             await _context.SaveChangesAsync();
         }
 
+        public async Task Edit(Forum forum)
+        {
+            _context.Update(forum);
+            await _context.SaveChangesAsync();
+        }
+
         public IEnumerable<Forum> GetAll()
         {
             return _context.Forums.Include(f => f.Posts); 
@@ -73,14 +79,6 @@ namespace Games_Forum.Service
             return GetById(id).Posts.Any(p => p.Created > window);
         }
 
-        public Task UpdateForumDescription(int forumId, string newDescription)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task UpdateForumTitle(int forumId, string newTitle)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

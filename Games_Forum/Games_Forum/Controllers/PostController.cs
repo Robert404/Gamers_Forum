@@ -64,13 +64,7 @@ namespace Games_Forum.Controllers
             return View(model);
         }
 
-        public async Task<IActionResult> DeletePost(int id)
-        {
-            await _postService.Delete(id);
-            return RedirectToAction("Index", "Home");
-        }
-
-
+        
         [HttpPost]
         public async Task<IActionResult> AddPost(NewPostModel model)
         {
@@ -94,6 +88,31 @@ namespace Games_Forum.Controllers
                 User = user,
                 Forum = forum
             };
+        }
+
+        public async Task<IActionResult> DeletePost(int id)
+        {
+            await _postService.Delete(id);
+            return RedirectToAction("Index", "Home");
+        }
+
+
+        public IActionResult Edit(int id)
+        {
+            var model = new Post();
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditPost(Post model, int id) 
+        {
+            var post = _postService.GetById(model.Id);
+            post.Title = model.Title;
+            post.Content = model.Content;
+            post.Created = DateTime.Now;
+
+            await _postService.Edit(post);
+            return RedirectToAction("Index","Home");
         }
 
         private IEnumerable<PostReplyModel> BuildPostReplies(IEnumerable<PostReply> replies)

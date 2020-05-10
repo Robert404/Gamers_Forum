@@ -49,8 +49,9 @@
                             </div>
                         </td>
                         @if (User.IsInRole("Admin"))
-                        {
+                        {                        
                             <td>
+                                <a asp-controller="Forum" asp-action="Edit" asp-route-id="@forum.Id" class="btn btn-primary">Edit</a>
                                 <a asp-controller="Forum" asp-action="DeleteForum" asp-route-id="@forum.Id" class="btn btn-danger">Delete</a>
                             </td>
 

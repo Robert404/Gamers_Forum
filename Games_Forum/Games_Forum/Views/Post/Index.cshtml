@@ -70,10 +70,10 @@
                         @Html.Raw(reply.ReplyContent)
                     </div>
                 </div>
-                @if (User.Identity.Name == reply.AuthorName)
+                @if (User.Identity.Name == reply.AuthorName || User.IsInRole("Admin"))
                 {
                     <div>
-                        <a asp-controller="Reply" asp-action="DeleteReply" asp-route-id="@reply.Id" class="btn btn-danger">Delete</a>
+                        <a asp-controller="Reply" asp-action="DeleteReply" asp-route-id="@reply.Id" class="btn btn-danger">Delete</a>                 
                     </div>
                 }
 

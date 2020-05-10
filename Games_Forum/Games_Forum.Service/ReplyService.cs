@@ -12,9 +12,13 @@ namespace Games_Forum.Service
     public class ReplyService : IReply
     {
         private readonly ApplicationDbContext _context;
-        public async Task Delete(int replyId)
+        public ReplyService(ApplicationDbContext context) 
         {
-            var reply = GetById(replyId);
+            _context = context;
+        }
+        public async Task Delete(int id)
+        {
+            var reply = GetById(id);
             _context.Remove(reply);
             await _context.SaveChangesAsync();
         }

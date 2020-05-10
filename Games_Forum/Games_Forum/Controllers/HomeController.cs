@@ -33,7 +33,7 @@ namespace Games_Forum.Controllers
 
         private HomeIndexModel BuildHomeIndexModel()
         {
-            var latestPosts = _postService.GetLatestPosts(5);
+            var latestPosts = _postService.GetLatestPosts(1);
 
             var posts = latestPosts.Select(p => new PostListingModel
             {
