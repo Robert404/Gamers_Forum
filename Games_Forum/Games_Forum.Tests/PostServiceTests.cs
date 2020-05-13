@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using NUnit.Framework;
 using System;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Games_Forum.Tests
 {
@@ -144,8 +145,36 @@ namespace Games_Forum.Tests
                 var postService = new PostService(ctx);
                 var posts = postService.GetAll();
 
-                //Arrange
+                //Assert
                 Assert.AreEqual(posts.Count(), 3);
+            }
+        }
+
+        [Test]
+        public async Task Create_Post_Creates_New_Post_Via_Context() 
+        {
+            var options = new DbContextOptionsBuilder<ApplicationDbContext>()
+                .UseInMemoryDatabase(databaseName: "Add_Post_Writes_Post_To_Database").Options;
+
+            //Arrange
+            using (var ctx = new ApplicationDbContext(options)) 
+            {
+                var postService = new PostService(ctx);
+                var post = new Post
+                {
+                    Title = "New Test Post",
+                    Content = "some content in post"
+                };
+
+                await postService.Add(post);
+            }
+
+            //Act
+            using (var ctx = new ApplicationDbContext(options)) 
+            {
+                //Assert
+                Assert.AreEqual(1, ctx.Posts.CountAsync().Result);
+                Assert.AreEqual("New Test Post" , ctx.Posts.SingleAsync().Result.Title);
             }
         }
     }

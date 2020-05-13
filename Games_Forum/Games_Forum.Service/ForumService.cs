@@ -41,10 +41,6 @@ namespace Games_Forum.Service
             return _context.Forums.Include(f => f.Posts); 
         }
 
-        public IEnumerable<IdentityUser> GetAllActiveUsers()
-        {
-            throw new NotImplementedException();
-        }
 
         public IEnumerable<IdentityUser> GetAllActiveUsers(int id)
         {
