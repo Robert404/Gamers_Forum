@@ -3,8 +3,9 @@
 <title>Edit @Model.Name forum</title>
 
 <div>
-    <form method="post" asp-controller="Forum" asp-action="EditForum" asp-route-id="@Url.RouteUrl(ViewContext.RouteData.Values)">
+    <form method="post" asp-controller="Forum" asp-action="EditForum">
         <div asp-validation-summary="All" class="text-danger"></div>
+        <input type="hidden" asp-for="Id" value="@Model.Id" />
         <div class="form-group">
             <label asp-for="Name">Form Title</label>
             <input asp-for="Name" class="form-control" placeholder="Choose forum title" />
