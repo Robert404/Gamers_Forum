@@ -28,3 +28,13 @@ C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum.Data\obj\Debug\netcoreapp
 C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum.Data\obj\Debug\netcoreapp3.0\Games_Forum.Data.AssemblyInfo.cs
 C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum.Data\obj\Debug\netcoreapp3.0\Games_Forum.Data.dll
 C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum.Data\obj\Debug\netcoreapp3.0\Games_Forum.Data.pdb
+C:\Users\User\Desktop\Gamers_Forum-ad2976db98f1f6568ad9653502f6d7e2509bc702\Games_Forum\Games_Forum.Data\bin\Debug\netcoreapp3.0\Games_Forum.Data.deps.json
+C:\Users\User\Desktop\Gamers_Forum-ad2976db98f1f6568ad9653502f6d7e2509bc702\Games_Forum\Games_Forum.Data\bin\Debug\netcoreapp3.0\Games_Forum.Data.runtimeconfig.json
+C:\Users\User\Desktop\Gamers_Forum-ad2976db98f1f6568ad9653502f6d7e2509bc702\Games_Forum\Games_Forum.Data\bin\Debug\netcoreapp3.0\Games_Forum.Data.runtimeconfig.dev.json
+C:\Users\User\Desktop\Gamers_Forum-ad2976db98f1f6568ad9653502f6d7e2509bc702\Games_Forum\Games_Forum.Data\bin\Debug\netcoreapp3.0\Games_Forum.Data.dll
+C:\Users\User\Desktop\Gamers_Forum-ad2976db98f1f6568ad9653502f6d7e2509bc702\Games_Forum\Games_Forum.Data\bin\Debug\netcoreapp3.0\Games_Forum.Data.pdb
+C:\Users\User\Desktop\Gamers_Forum-ad2976db98f1f6568ad9653502f6d7e2509bc702\Games_Forum\Games_Forum.Data\obj\Debug\netcoreapp3.0\Games_Forum.Data.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Gamers_Forum-ad2976db98f1f6568ad9653502f6d7e2509bc702\Games_Forum\Games_Forum.Data\obj\Debug\netcoreapp3.0\Games_Forum.Data.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Gamers_Forum-ad2976db98f1f6568ad9653502f6d7e2509bc702\Games_Forum\Games_Forum.Data\obj\Debug\netcoreapp3.0\Games_Forum.Data.AssemblyInfo.cs
+C:\Users\User\Desktop\Gamers_Forum-ad2976db98f1f6568ad9653502f6d7e2509bc702\Games_Forum\Games_Forum.Data\obj\Debug\netcoreapp3.0\Games_Forum.Data.dll
+C:\Users\User\Desktop\Gamers_Forum-ad2976db98f1f6568ad9653502f6d7e2509bc702\Games_Forum\Games_Forum.Data\obj\Debug\netcoreapp3.0\Games_Forum.Data.pdb

@@ -2,7 +2,6 @@
 using Games_Forum.Data.Models;
 using Games_Forum.Service;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using NUnit.Framework;
 using System;
 using System.Linq;
@@ -16,14 +15,14 @@ namespace Games_Forum.Tests
         [TestCase("coffee", 3)]
         [TestCase("posT", 1)]
         [TestCase("tEa", 1)]
-        [TestCase("Corona", 0)]
-        public void Return_Filtered_Results_Similar_To_Query(string query, int expected)
+        [TestCase("Corona",0)]
+        public void Return_Filtered_Results_Similar_To_Query(string query, int expected) 
         {
             var options = new DbContextOptionsBuilder<ApplicationDbContext>()
                 .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString()).Options;
 
             //Arrange
-            using (var ctx = new ApplicationDbContext(options))
+            using (var ctx = new ApplicationDbContext(options)) 
             {
                 ctx.Forums.Add(new Forum
                 {
@@ -56,7 +55,7 @@ namespace Games_Forum.Tests
 
                 ctx.SaveChanges();
 
-
+                
             }
 
             //Act
@@ -69,8 +68,8 @@ namespace Games_Forum.Tests
                 //Assert
                 Assert.AreEqual(expected, postCount);
             }
-        }
 
+        }
 
         [Test]
         public void Return_Post_Correctly_By_PostId()
@@ -110,13 +109,13 @@ namespace Games_Forum.Tests
         }
 
         [Test]
-        public void Get_All_Posts_Equal_To_GetAll() 
+        public void Get_All_Posts_Equal_To_GetAll()
         {
             //Arrange
             var options = new DbContextOptionsBuilder<ApplicationDbContext>()
                 .UseInMemoryDatabase(databaseName: "Get_Post_By_Id").Options;
 
-            using (var ctx = new ApplicationDbContext(options)) 
+            using (var ctx = new ApplicationDbContext(options))
             {
                 ctx.Add(new Post
                 {
@@ -140,7 +139,7 @@ namespace Games_Forum.Tests
             }
 
             //Act
-            using (var ctx = new ApplicationDbContext(options)) 
+            using (var ctx = new ApplicationDbContext(options))
             {
                 var postService = new PostService(ctx);
                 var posts = postService.GetAll();
@@ -150,14 +149,15 @@ namespace Games_Forum.Tests
             }
         }
 
+
         [Test]
-        public async Task Create_Post_Creates_New_Post_Via_Context() 
+        public async Task Create_Post_Creates_New_Post_Via_Context()
         {
             var options = new DbContextOptionsBuilder<ApplicationDbContext>()
                 .UseInMemoryDatabase(databaseName: "Add_Post_Writes_Post_To_Database").Options;
 
             //Arrange
-            using (var ctx = new ApplicationDbContext(options)) 
+            using (var ctx = new ApplicationDbContext(options))
             {
                 var postService = new PostService(ctx);
                 var post = new Post
@@ -170,13 +170,13 @@ namespace Games_Forum.Tests
             }
 
             //Act
-            using (var ctx = new ApplicationDbContext(options)) 
+            using (var ctx = new ApplicationDbContext(options))
             {
                 //Assert
                 Assert.AreEqual(1, ctx.Posts.CountAsync().Result);
-                Assert.AreEqual("New Test Post" , ctx.Posts.SingleAsync().Result.Title);
+                Assert.AreEqual("New Test Post", ctx.Posts.SingleAsync().Result.Title);
             }
         }
+
     }
 }
-

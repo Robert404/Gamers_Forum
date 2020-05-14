@@ -31,3 +31,14 @@ C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum.Service\obj\Debug\netcore
 C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum.Service\obj\Debug\netcoreapp3.0\Games_Forum.Service.csproj.CopyComplete
 C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum.Service\obj\Debug\netcoreapp3.0\Games_Forum.Service.dll
 C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum.Service\obj\Debug\netcoreapp3.0\Games_Forum.Service.pdb
+C:\Users\User\Desktop\Gamers_Forum-ad2976db98f1f6568ad9653502f6d7e2509bc702\Games_Forum\Games_Forum.Service\bin\Debug\netcoreapp3.0\Games_Forum.Service.deps.json
+C:\Users\User\Desktop\Gamers_Forum-ad2976db98f1f6568ad9653502f6d7e2509bc702\Games_Forum\Games_Forum.Service\bin\Debug\netcoreapp3.0\Games_Forum.Service.dll
+C:\Users\User\Desktop\Gamers_Forum-ad2976db98f1f6568ad9653502f6d7e2509bc702\Games_Forum\Games_Forum.Service\bin\Debug\netcoreapp3.0\Games_Forum.Service.pdb
+C:\Users\User\Desktop\Gamers_Forum-ad2976db98f1f6568ad9653502f6d7e2509bc702\Games_Forum\Games_Forum.Service\bin\Debug\netcoreapp3.0\Games_Forum.Data.dll
+C:\Users\User\Desktop\Gamers_Forum-ad2976db98f1f6568ad9653502f6d7e2509bc702\Games_Forum\Games_Forum.Service\bin\Debug\netcoreapp3.0\Games_Forum.Data.pdb
+C:\Users\User\Desktop\Gamers_Forum-ad2976db98f1f6568ad9653502f6d7e2509bc702\Games_Forum\Games_Forum.Service\obj\Debug\netcoreapp3.0\Games_Forum.Service.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Gamers_Forum-ad2976db98f1f6568ad9653502f6d7e2509bc702\Games_Forum\Games_Forum.Service\obj\Debug\netcoreapp3.0\Games_Forum.Service.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Gamers_Forum-ad2976db98f1f6568ad9653502f6d7e2509bc702\Games_Forum\Games_Forum.Service\obj\Debug\netcoreapp3.0\Games_Forum.Service.AssemblyInfo.cs
+C:\Users\User\Desktop\Gamers_Forum-ad2976db98f1f6568ad9653502f6d7e2509bc702\Games_Forum\Games_Forum.Service\obj\Debug\netcoreapp3.0\Games_Forum.Service.csproj.CopyComplete
+C:\Users\User\Desktop\Gamers_Forum-ad2976db98f1f6568ad9653502f6d7e2509bc702\Games_Forum\Games_Forum.Service\obj\Debug\netcoreapp3.0\Games_Forum.Service.dll
+C:\Users\User\Desktop\Gamers_Forum-ad2976db98f1f6568ad9653502f6d7e2509bc702\Games_Forum\Games_Forum.Service\obj\Debug\netcoreapp3.0\Games_Forum.Service.pdb

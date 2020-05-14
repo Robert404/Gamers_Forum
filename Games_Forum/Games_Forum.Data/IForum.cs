@@ -10,6 +10,7 @@ namespace Games_Forum.Data
     {
         Forum GetById(int id);
         IEnumerable<Forum> GetAll();
+        IEnumerable<IdentityUser> GetAllActiveUsers();
 
         Task Create(Forum forum);
         Task Delete(int forumId);
