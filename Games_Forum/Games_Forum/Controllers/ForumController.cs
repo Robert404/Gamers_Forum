@@ -133,7 +133,7 @@ namespace Games_Forum.Controllers
         [HttpPost]
         public async Task<IActionResult> EditForum(EditForumModel model) 
         {
-            Forum forum = _forumService.GetById(model.Id);
+            var forum = _forumService.GetById(model.Id);
             forum.Title = model.Title;
             forum.Description = model.Description;
             forum.Id = model.Id;

@@ -99,20 +99,26 @@ namespace Games_Forum.Controllers
 
         public IActionResult Edit(int id)
         {
-            var model = new Post();
+            var post = _postService.GetById(id);
+            var model = new PostEditModel
+            {
+                Id = post.Id,
+                Title = post.Title,
+                Content = post.Content
+            };
             return View(model);
         }
 
         [HttpPost]
-        public async Task<IActionResult> EditPost(Post model, int id) 
+        public async Task<IActionResult> EditPost(PostEditModel model) 
         {
             var post = _postService.GetById(model.Id);
             post.Title = model.Title;
             post.Content = model.Content;
-            post.Created = DateTime.Now;
+            post.Id = model.Id;
 
             await _postService.Edit(post);
-            return RedirectToAction("Index","Home");
+            return RedirectToAction("Index","Post", new { id = model.Id});
         }
 
         private IEnumerable<PostReplyModel> BuildPostReplies(IEnumerable<PostReply> replies)
