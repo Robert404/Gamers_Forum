@@ -118,21 +118,29 @@ namespace Games_Forum.Controllers
 
 
         public IActionResult Edit(int id)
-        { 
-            var model = new ForumListingModel();
+        {
+            var forum = _forumService.GetById(id);
+            EditForumModel model = new EditForumModel
+            {
+                Id = forum.Id,
+                Title = forum.Title,
+                Description = forum.Description,
+                ImageUrl = forum.ImageUrl
+            };
             return View(model);
         }
 
         [HttpPost]
-        public async Task<IActionResult> EditForum(ForumListingModel model, int id) 
+        public async Task<IActionResult> EditForum(EditForumModel model) 
         {
-            var forum = _forumService.GetById(id);
-
-            forum.Title = model.Name;
+            Forum forum = _forumService.GetById(model.Id);
+            forum.Title = model.Title;
             forum.Description = model.Description;
-            forum.ImageUrl = model.ImageUrl;
-            forum.Created = DateTime.Now;
-
+            forum.Id = model.Id;
+            if (model.ImageUrl != null) 
+            {
+                forum.ImageUrl = model.ImageUrl;
+            }
 
             await _forumService.Edit(forum);
             return RedirectToAction("Index", "Forum");
