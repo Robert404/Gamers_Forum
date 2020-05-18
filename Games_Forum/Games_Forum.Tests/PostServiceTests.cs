@@ -1,5 +1,6 @@
 ﻿using Games_Forum.Data;
 using Games_Forum.Data.Models;
+using Games_Forum.Models.Post;
 using Games_Forum.Service;
 using Microsoft.EntityFrameworkCore;
 using NUnit.Framework;
@@ -175,6 +176,50 @@ namespace Games_Forum.Tests
                 //Assert
                 Assert.AreEqual(1, ctx.Posts.CountAsync().Result);
                 Assert.AreEqual("New Test Post", ctx.Posts.SingleAsync().Result.Title);
+            }
+        }
+
+        [Test]
+
+        public async Task Edit_Post_Correctly_By_EditPost() 
+        {
+            var options = new DbContextOptionsBuilder<ApplicationDbContext>()
+                .UseInMemoryDatabase(databaseName: "Edit_Post").Options;
+
+            //Arrange
+            using (var ctx = new ApplicationDbContext(options)) 
+            {
+                ctx.Posts.Add(new Post
+                {
+                    Id = 123,
+                    Title = "I am Post",
+                    Content = "I am Content"
+                });
+
+                ctx.Posts.Add(new Post
+                {
+                    Id = 777,
+                    Title = "Second Post",
+                    Content = "Real Content"
+                });
+
+                ctx.SaveChanges();
+            }
+
+
+            //Act
+            using (var ctx = new ApplicationDbContext(options)) 
+            {
+                var postService = new PostService(ctx);
+                var newPost = new PostEditModel { Title = "Edited Post", Content = "Edited Content"};
+                var post = ctx.Posts.Find(123);
+                post.Title = newPost.Title;
+                post.Content = newPost.Content;
+                await postService.Edit(post);
+
+                //Assert
+                Assert.AreEqual(newPost.Title, post.Title);
+                Assert.AreEqual(newPost.Content, post.Content);
             }
         }
 

@@ -56,6 +56,7 @@ namespace Games_Forum.Controllers
                 Id = post.Id,
                 AuthorId = post.User.Id,
                 AuthorRating = appUser.Rating,
+                AuthorName = post.User.UserName,
                 Title = post.Title,
                 DatePosted = post.Created.ToString(),
                 RepliesCount = post.Replies.Count(),

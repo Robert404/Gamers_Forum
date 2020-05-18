@@ -1,5 +1,6 @@
 ﻿using Games_Forum.Data;
 using Games_Forum.Data.Models;
+using Games_Forum.Models.Forum;
 using Games_Forum.Service;
 using Microsoft.EntityFrameworkCore;
 using NUnit.Framework;
@@ -106,6 +107,48 @@ namespace Games_Forum.Tests
 
                 //Assert
                 Assert.AreEqual(forum.Title, "Awesome test");
+            }
+        }
+
+        [Test]
+        public async Task Edit_Forum_Correctrly_By_EditForum() 
+        {
+            var options = new DbContextOptionsBuilder<ApplicationDbContext>()
+                .UseInMemoryDatabase(databaseName: "Edit_Forum").Options;
+
+            //Arrange
+            using (var ctx = new ApplicationDbContext(options)) 
+            {
+                ctx.Forums.Add(new Forum
+                {
+                    Id = 228,
+                    Title = "Test Forum",
+                    Description = "Desc for test forum"
+                });
+
+                ctx.Forums.Add(new Forum
+                {
+                    Id = 554,
+                    Title = "Second Forum",
+                    Description = "desc for second forum"
+                });
+
+                ctx.SaveChanges();
+            }
+
+            //Act
+            using (var ctx = new ApplicationDbContext(options)) 
+            {
+                var forumService = new ForumService(ctx);
+                var newForum = new EditForumModel { Title = "Edited Title", Description = "Edited desc" };
+                var forum = ctx.Forums.Find(228);
+                forum.Title = newForum.Title;
+                forum.Description = newForum.Description;
+                await forumService.Edit(forum);
+
+                //Assert
+                Assert.AreEqual(newForum.Title, forum.Title);
+                Assert.AreEqual(newForum.Description, forum.Description);
             }
         }
     }
