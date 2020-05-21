@@ -57,10 +57,32 @@ namespace Games_Forum.Controllers
             return RedirectToAction("Index", "Post", new { id = model.PostId});
         }
 
-        public async Task<IActionResult> DeleteReply(int id) 
+        public async Task <IActionResult> DeleteReply(int id) 
         {
             await _replyService.Delete(id);
-            return RedirectToAction("Index","Home");
+            return RedirectToAction("Index","Forum");
+        }
+
+        public  IActionResult Edit(int id) 
+        {
+            var reply = _replyService.GetById(id);
+            var model = new ReplyEditModel
+            { 
+                Id = reply.Id,
+                ReplyContent = reply.Content
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditReply(ReplyEditModel model)
+        {
+            var reply = _replyService.GetById(model.Id);
+            reply.Content = model.ReplyContent;
+
+            await _replyService.Edit(reply);
+            return RedirectToAction("Index","Forum");
         }
 
         private PostReply BuildReply(PostReplyModel model, IdentityUser user)

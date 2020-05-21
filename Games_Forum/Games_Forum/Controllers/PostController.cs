@@ -104,7 +104,7 @@ namespace Games_Forum.Controllers
             {
                 Id = post.Id,
                 Title = post.Title,
-                Content = post.Content
+                Content = post.Content,
             };
             return View(model);
         }

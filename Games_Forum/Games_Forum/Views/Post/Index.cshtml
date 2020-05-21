@@ -73,7 +73,8 @@
                 @if (User.Identity.Name == reply.AuthorName || User.IsInRole("Admin"))
                 {
                     <div>
-                        <a asp-controller="Reply" asp-action="DeleteReply" asp-route-id="@reply.Id" class="btn btn-danger">Delete</a>                 
+                        <a asp-controller="Reply" asp-action="DeleteReply" asp-route-id="@reply.Id" class="btn btn-danger">Delete</a>   
+                        <a asp-controller="Reply" asp-action="Edit" asp-route-id="@reply.Id" class="btn btn-primary">Edit</a>
                     </div>
                 }
 

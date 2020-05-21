@@ -23,15 +23,17 @@ namespace Games_Forum.Service
             await _context.SaveChangesAsync();
         }
 
-        public Task Edit(PostReply reply)
+        public async Task Edit(PostReply reply)
         {
-            throw new NotImplementedException();
+            _context.Update(reply);
+            await _context.SaveChangesAsync();
         }
 
         public PostReply GetById(int id)
         {
             return _context.PostReplies.Where(r => r.Id == id)
-                .Include(r => r.User).First();
+                .Include(r => r.User).FirstOrDefault();
         }
+
     }
 }

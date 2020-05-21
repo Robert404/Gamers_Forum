@@ -660,3 +660,4 @@ C:\Users\User\Desktop\Gamers_Forum-ad2976db98f1f6568ad9653502f6d7e2509bc702\Game
 C:\Users\User\Desktop\Gamers_Forum-ad2976db98f1f6568ad9653502f6d7e2509bc702\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Games_Forum.csproj.CopyComplete
 C:\Users\User\Desktop\Gamers_Forum-ad2976db98f1f6568ad9653502f6d7e2509bc702\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Games_Forum.dll
 C:\Users\User\Desktop\Gamers_Forum-ad2976db98f1f6568ad9653502f6d7e2509bc702\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Games_Forum.pdb
+C:\Games_Forum_New\Games_Forum\Games_Forum\Games_Forum\obj\Debug\netcoreapp3.0\Razor\Views\Reply\Edit.cshtml.g.cs
