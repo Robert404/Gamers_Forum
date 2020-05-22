@@ -147,11 +147,13 @@ namespace Games_Forum.Controllers
             return RedirectToAction("Index", "Forum");
         }
 
+
         public async Task<IActionResult> DeleteForum(int id) 
         {
             await _forumService.Delete(id);
-            return RedirectToAction("Index","Home");
+            return RedirectToAction("Index","Forum");
         }
+
 
         private ForumListingModel BuildForumListing(Post post)
         {

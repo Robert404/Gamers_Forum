@@ -19,7 +19,7 @@ namespace Games_Forum.Service
         public async Task Delete(int id)
         {
             var reply = GetById(id);
-            _context.Remove(reply);
+            _context.PostReplies.Remove(reply);
             await _context.SaveChangesAsync();
         }
 

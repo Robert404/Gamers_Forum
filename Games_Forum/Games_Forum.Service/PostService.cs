@@ -31,7 +31,7 @@ namespace Games_Forum.Service
         public async Task Delete(int id)
         {
             var post = GetById(id);
-             _context.Remove(post);
+             _context.Posts.Remove(post);
             await _context.SaveChangesAsync();
         }
 

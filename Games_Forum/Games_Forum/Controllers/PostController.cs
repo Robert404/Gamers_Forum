@@ -90,10 +90,10 @@ namespace Games_Forum.Controllers
             };
         }
 
-        public async Task<IActionResult> DeletePost(int id)
+        public async Task<IActionResult> DeletePost(int postId, int forumId)
         {
-            await _postService.Delete(id);
-            return RedirectToAction("Index", "Home");
+            await _postService.Delete(postId);
+            return RedirectToAction("Topic", "Forum", new { id = forumId});
         }
 
 
