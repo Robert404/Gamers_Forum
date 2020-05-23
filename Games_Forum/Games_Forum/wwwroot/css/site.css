@@ -116,8 +116,6 @@ button.accept-policy {
     }
 
 
-
-
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
@@ -303,10 +301,10 @@ body {
     background-color: #fff;
     padding: 24px;
     margin-left: 15px;
-}   
+}
 
 .postAuthorImage {
-    background-image:url(/images/users/s1mple.jpeg) !important;
+    background-image: url(/images/users/user3.jpg);
     height: 80px;
     width: 80px;
     background-size: 100%;
@@ -560,16 +558,19 @@ body {
 }
 
 .userProfileImage {
-    background-image: url(/images/users/s1mple.jpeg) !important;
     background-size: 100%;
 }
 
-#userEmailLabel, #userBioLabel, #userCreatedLabel, #userRating, #userActiveLabel {
-    display: block;
-    color: #444;
-    font-family: 'Roboto';
-    padding-top: 3px;
-}
+    .userProfileImage img {
+        width: 320px;
+    }
+
+    #userEmailLabel, #userBioLabel, #userCreatedLabel, #userRating, #userActiveLabel {
+        display: block;
+        color: #444;
+        font-family: 'Roboto';
+        padding-top: 3px;
+    }
 
 #userName {
     display: block;
