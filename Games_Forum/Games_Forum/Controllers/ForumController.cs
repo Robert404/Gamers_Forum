@@ -135,7 +135,7 @@ namespace Games_Forum.Controllers
         public async Task<IActionResult> EditForum(EditForumModel model) 
         {
             var forum = _forumService.GetById(model.Id);
-            forum.Title = model.Title;
+            forum.Title = model.Title; 
             forum.Description = model.Description;
             forum.Id = model.Id;
             if (model.ImageUrl != null) 
