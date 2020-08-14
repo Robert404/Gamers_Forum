@@ -3,7 +3,6 @@ This is basic ASP.NET Core project, so You can use **git clone** command and dow
 
 # About Project
 Practice project using ASP.NET Core as framework, Entity Framework Core as ORM, Sql Server as relational database management system. 
-asda
 
 Features that i have done in this project: 
 *  Developed Sign In/ Sign up functionality
